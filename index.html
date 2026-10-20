@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Andrew's Dark-type digital trading card: Web Design & Engineering, stats, and special ability."
+    />
+    <meta name="theme-color" content="#f4ecff" />
+    <title>Andrew — Digital Trading Card</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <p class="page__kicker"><span aria-hidden="true">✦</span> THE HUMAN COLLECTION</p>
+
+      <article
+        class="trading-card"
+        aria-labelledby="card-name"
+        aria-label="Andrew's trading card. Hover or focus to see the back."
+        tabindex="0"
+      >
+        <div class="card__inner">
+          <div class="card__face card__front">
+            <div class="card__shine" aria-hidden="true"></div>
+
+            <header class="card__topline">
+              <span class="card__series"><span aria-hidden="true">🦇</span> CREATOR SERIES</span>
+              <span class="card__number">NO. 001 <span aria-hidden="true">◆</span></span>
+            </header>
+
+            <section class="portrait" aria-label="Portrait illustration">
+              <span class="portrait__spark portrait__spark--one" aria-hidden="true">✦</span>
+              <span class="portrait__spark portrait__spark--two" aria-hidden="true">✳</span>
+              <div class="portrait__avatar" aria-hidden="true">
+                <span class="portrait__face">:)</span>
+              </div>
+              <span class="portrait__caption">ONE OF A KIND</span>
+            </section>
+
+            <div class="card__identity">
+              <div>
+                <p class="card__label">PLAYER</p>
+                <h1 id="card-name">Andrew</h1>
+              </div>
+              <span class="level"><span aria-hidden="true">★</span> LV. 01</span>
+            </div>
+
+            <section class="major" aria-labelledby="major-label">
+              <span class="major__icon" aria-hidden="true">✎</span>
+              <div>
+                <h2 class="card__label" id="major-label">MAJOR / INTEREST</h2>
+                <p>Web Design &amp; Engineering</p>
+              </div>
+              <span class="major__type">DARK TYPE</span>
+            </section>
+
+            <section class="stats" aria-label="Stats out of 100">
+              <div class="stat">
+                <div class="stat__label"><span>Pixel Perfection</span><strong>88/100</strong></div>
+                <div class="stat__track" aria-hidden="true"><span style="width: 88%"></span></div>
+              </div>
+              <div class="stat">
+                <div class="stat__label"><span>Deadline Vanishing</span><strong>73/100</strong></div>
+                <div class="stat__track" aria-hidden="true"><span style="width: 73%"></span></div>
+              </div>
+              <div class="stat">
+                <div class="stat__label"><span>Tab Collector</span><strong>96/100</strong></div>
+                <div class="stat__track" aria-hidden="true"><span style="width: 96%"></span></div>
+              </div>
+            </section>
+
+            <section class="ability" aria-labelledby="ability-title">
+              <div class="ability__heading">
+                <span class="ability__icon" aria-hidden="true">⚡</span>
+                <h2 id="ability-title">SPECIAL ABILITY</h2>
+              </div>
+              <p class="ability__name">Midnight Brainwave</p>
+              <p class="ability__description">
+                Turns one “quick idea” into a 2 a.m. masterpiece, then forgets why the fridge is open.
+              </p>
+              <button class="ability__button" type="button" aria-pressed="false">
+                <span aria-hidden="true">✦</span> Activate ability
+              </button>
+            </section>
+
+            <footer class="card__footer">
+              <span>Hand-directed by me, built with AI</span>
+              <span aria-hidden="true">✦ ✦ ✦</span>
+            </footer>
+          </div>
+
+          <div class="card__face card__back" aria-label="Fun fact about Andrew">
+            <span class="card__back-mark" aria-hidden="true">✦</span>
+            <p class="card__back-kicker">A LITTLE FUN FACT</p>
+            <h2>Did you know?</h2>
+            <p class="card__fact">
+              Every browser tab Andrew opens is now a permanent member of the design team.
+            </p>
+            <span class="card__back-hint">MOVE YOUR POINTER AWAY TO FLIP BACK</span>
+          </div>
+        </div>
+      </article>
+
+      <section class="battle" aria-label="Card battle">
+        <button class="battle__button" id="battle-button" type="button">
+          <span class="battle__dice" aria-hidden="true">🎲</span>
+          Battle!
+        </button>
+        <div class="battle__result" id="battle-result" role="status" aria-live="polite" aria-atomic="true">
+          <p class="battle__winner">READY?</p>
+          <p class="battle__score">Roll the dice to challenge a mystery opponent.</p>
+        </div>
+      </section>
+
+      <p class="page__note">A little card for a big main character.</p>
+    </main>
+  </body>
+</html>
