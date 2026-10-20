@@ -4,18 +4,43 @@ const battle = document.querySelector(".battle");
 const battleButton = document.querySelector("#battle-button");
 const battleWinner = document.querySelector(".battle__winner");
 const battleScore = document.querySelector(".battle__score");
+let heldPointerId = null;
 
-card.addEventListener("click", (event) => {
+card.addEventListener("pointerdown", (event) => {
   if (
-    !window.matchMedia("(hover: none)").matches ||
-    !(event.target instanceof Element) ||
-    event.target.closest("button")
+    !event.isPrimary ||
+    event.button !== 0 ||
+    (event.target instanceof Element && event.target.closest("button"))
   ) {
     return;
   }
 
-  card.classList.toggle("is-flipped");
+  heldPointerId = event.pointerId;
 });
+
+card.addEventListener("pointerleave", (event) => {
+  if (event.pointerId === heldPointerId) {
+    card.classList.add("is-flipped");
+  }
+});
+
+card.addEventListener("pointerenter", (event) => {
+  if (event.pointerId === heldPointerId) {
+    card.classList.remove("is-flipped");
+  }
+});
+
+const stopHoldingCard = (event) => {
+  if (event.pointerId !== heldPointerId) {
+    return;
+  }
+
+  heldPointerId = null;
+  card.classList.remove("is-flipped");
+};
+
+window.addEventListener("pointerup", stopHoldingCard);
+window.addEventListener("pointercancel", stopHoldingCard);
 
 abilityButton.addEventListener("click", () => {
   const isPowered = abilityButton.getAttribute("aria-pressed") !== "true";
