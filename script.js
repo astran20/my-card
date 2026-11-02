@@ -6,6 +6,7 @@ const battleWinner = document.querySelector(".battle__winner");
 const battleScore = document.querySelector(".battle__score");
 let heldPointerId = null;
 
+
 card.addEventListener("pointerdown", (event) => {
   if (
     !event.isPrimary ||

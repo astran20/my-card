@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="HELP_Chat_script.js" defer></script>
 </head>
 <body>
     <main class="page">
@@ -21,12 +22,14 @@
                     </header>
                     
                     <section class="portrait">
-                        <img src="PhotoOfMe.JPG" alt="Picture of Me">
+                        <img src="PhotoOfMe.JPG" alt="Picture of Me" width="100%">
                     </section>
 
                     <form action="submit">
-                        <input type="text" placeholder="What do you want to ask?">
-                        <input type="submit">ASK</input>
+                        <p class="errorMessage" style="display:hidden" id="errorMsg">Please ask a question</p>
+                        <p style="display:hidden" id="successMsg">Imagine the Picture is an AI video of me that responds to your question.</p>
+                        <input type="text" placeholder="What do you want to ask?" required id="inputASK">
+                        <input type="submit" id="askButton">ASK</input>
                     </form>
                 </div>
             </div>

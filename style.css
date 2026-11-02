@@ -703,3 +703,7 @@ h1 {
   background: #44336f;
   transform: translateY(-5px);
 }
+
+.errorMessage{
+  color: red;
+}
