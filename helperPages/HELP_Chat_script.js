@@ -3,7 +3,7 @@ input = document.getElementById("inputASK");
 errorMsg = document.getElementById("errorMsg");
 successMsg = document.getElementById("successMsg");
 
-button.addEventListener("click", checkError());
+button.addEventListener("click", checkError);
 
 function checkError(){
     if(input.value == ""){
