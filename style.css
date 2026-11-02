@@ -687,3 +687,9 @@ h1 {
     animation-iteration-count: 1 !important;
   }
 }
+
+/*------------ My Stuff--------*/
+.welcomePage a{
+    text-decoration: none;
+    margin-bottom: 5px;
+}
