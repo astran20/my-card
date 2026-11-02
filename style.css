@@ -689,7 +689,17 @@ h1 {
 }
 
 /*------------ My Stuff--------*/
+.welcome{
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+}
 .welcomePage a{
     text-decoration: none;
-    margin-bottom: 5px;
+}
+
+.welcomePage section:hover{
+  color: white;
+  background: #44336f;
+  transform: translateY(-5px);
 }
