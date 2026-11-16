@@ -1,4 +1,4 @@
-import React from "react-dom/client";
+import { React }from "react-dom/client";
 function App() {
   return (
     <div className="App">
