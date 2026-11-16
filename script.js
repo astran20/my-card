@@ -1,3 +1,17 @@
+import { createRoot } from "react-dom/client";
+function App() {
+  return (
+    <div className="App">
+      <h1>React App</h1>
+    </div>
+  );
+}
+
+const root = createRoot(document.getElementById("root"));
+root.render(<App />);
+
+
+
 const card = document.querySelector(".trading-card");
 const abilityButton = document.querySelector(".ability__button");
 const battle = document.querySelector(".battle");
