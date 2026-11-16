@@ -376,6 +376,7 @@ function ChatPage() {
                 type="text"
                 placeholder="What do you want to ask?"
                 aria-label="What do you want to ask?"
+                required
                 value={question}
                 onChange={(event) => {
                   setQuestion(event.target.value);
