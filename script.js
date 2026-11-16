@@ -1,4 +1,4 @@
-import { React }from "react-dom/client";
+import { createRoot }from "react-dom/client";
 function App() {
   return (
     <div className="App">
@@ -7,7 +7,7 @@ function App() {
   );
 }
 
-const root = React.createRoot(document.getElementById("root"));
+const root = createRoot(document.getElementById("root"));
 root.render(<App />);
 
 
